@@ -13,7 +13,7 @@ int main(){
     
 
     const int *a = new int;
-    *a = 2;
+    // *a = 2;
     cout << *a << endl;
     delete a;
     int b = 5;
