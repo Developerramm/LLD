@@ -13,6 +13,6 @@ public class Main1 {
         int _marks = 300;
         int $marks = 300;
 
-        
+
     }
 }
