@@ -14,7 +14,7 @@ public class IfStatement {
         }else{
             System.out.println("You are count in low middle class family ");
         }
-        
+
         input.close();
 
     }
