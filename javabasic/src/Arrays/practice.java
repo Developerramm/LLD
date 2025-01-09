@@ -36,6 +36,32 @@ public class practice {
 
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Integer.MIN_VALUE);
-        
+
+        System.out.println("2D Array in java");
+
+        int brr[][] = {
+                {1,2,3,4,5,5},
+                {2,4,6,8,10,12},
+                {6,5,4,3,2,1}
+        };
+        int rowSize = brr.length;
+        int colSize = brr[0].length;
+
+        System.out.println("Printing using for loop ");
+        for(int rowIndex = 0; rowIndex<rowSize; rowIndex++){
+            for(int colIndex = 0; colIndex <colSize; colIndex++){
+                System.out.print(brr[rowIndex][colIndex] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("printing using for each loop");
+        for(int[] temp :brr){
+            for(int num : temp){
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+
     }
 }
