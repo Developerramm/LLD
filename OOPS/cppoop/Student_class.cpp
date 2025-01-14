@@ -3,26 +3,48 @@ using namespace std;
 class Student
 {
 
-public:
+private:
     // attribute
     int id;
     int age;
     string name;
     int numberOfSubject;
 
+    float *gpa;
+    string gf;
+
     // constructor
+
+public:
+    void setGpa(float a)
+    {
+        *this->gpa = a;
+    }
+
+    float getGpa() const
+    {
+        return *this->gpa;
+    }
+
+    float getAge() const
+    {
+        return this->age;
+    }
+
     Student()
     {
         cout << "Student ka default constructor called" << endl;
     }
 
     // parameterized constructor
-    Student(int id, int age, string name, int numberOfSubject)
+    Student(int id, int age, string name, int numberOfSubject, float gpa, string gf)
     {
         this->id = id;
         this->age = age;
         this->name = name;
         this->numberOfSubject = numberOfSubject;
+        this->gpa = new float(gpa);
+        this->gf = gf;
 
         cout << "parameterized constructor is called" << endl;
     }
@@ -59,24 +81,37 @@ public:
     ~Student()
     {
         cout << "Student Destructor " << endl;
+        delete this->gpa;
+    }
+
+private:
+    void gfChatting()
+    {
+        cout << "Chatting with gf " << endl;
     }
 };
 
 int main()
 {
 
-    Student A(1, 20, "Ranu", 6);
-    Student B(2, 22, "Raman", 5);
-    cout << A.age << endl;
+    Student A(1, 13, "ramu", 5, 7.3, "Minu");
+    // cout << A.age << endl;
     A.bunk();
-    B.sleep();
 
-    Student C = A;
+    // A.gfChatting();
 
-    // dynamic allocation
-    Student *D = new Student(3, 44, "ramdhir", 10);
-    cout << D->name << endl;
-    D->bunk();
+    // Student A(1, 20, "Ranu", 6);
+    // Student B(2, 22, "Raman", 5);
+    // cout << A.age << endl;
+    // A.bunk();
+    // B.sleep();
+
+    // Student C = A;
+
+    // // dynamic allocation
+    // Student *D = new Student(3, 44, "ramdhir", 10);
+    // cout << D->name << endl;
+    // D->bunk();
 
     // Student A;
     // A.name = "Ram";
@@ -94,6 +129,6 @@ int main()
 
     // B.bunk();
 
-    delete D;
+    // delete D;
     return 0;
 }
