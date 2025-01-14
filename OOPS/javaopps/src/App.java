@@ -1,11 +1,16 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Student A = new Student(1, 30, "Ram Kumar", 5);
-        System.out.println(A.name);
-        System.out.println(A.age);
-        System.out.println(A.id);
-        System.out.println(A.subject);
+        Student A = new Student(1, 30, "Ram Kumar", 5, "piku");
+        System.out.println(A.getName());
+        System.out.println(A.getAge());
+        A.setAge(50);
+        System.out.println(A.getAge());
+        // System.out.println(A.age);
+        // System.out.println(A.id);
+        // System.out.println(A.subject);
+
+        // A.gfChatting();
 
         A.study();
         A.bunk();

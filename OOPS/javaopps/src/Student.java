@@ -1,10 +1,24 @@
 public class Student {
 
     // attribute
-    public int id;
-    public int age;
-    public String name;
-    public int subject;
+    private int id;
+    private int age;
+    private String name;
+    private int subject;
+
+    private String gf;
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
 
     // default constructor
     public Student() {
@@ -12,12 +26,13 @@ public class Student {
     }
 
     // parameterized constructor
-    public Student(int id, int age, String name, int subject) {
+    public Student(int id, int age, String name, int subject, String gf) {
         System.out.println("parameterized constructor called");
         this.id = id;
         this.age = age;
         this.name = name;
         this.subject = subject;
+        this.gf = gf;
     }
 
     // copy constructor
@@ -40,5 +55,9 @@ public class Student {
 
     public void bunk() {
         System.out.println(" Bunking here");
+    }
+
+    private void gfChatting() {
+        System.out.println("Gf Chatting here");
     }
 }
